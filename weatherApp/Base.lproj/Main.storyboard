@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,69 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAD-EA-z4K">
+                                <rect key="frame" x="273" y="251" width="55" height="30"/>
+                                <animations/>
+                                <state key="normal" title="getData"/>
+                                <connections>
+                                    <action selector="getDataButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yaT-Iy-1mi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8u-Er-TsP">
+                                <rect key="frame" x="103" y="378" width="394" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Rs8-3t-Ima"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwX-lW-KO7">
+                                <rect key="frame" x="121" y="492" width="359" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="w1C-vS-ywg"/>
+                                    <constraint firstAttribute="width" constant="359" id="zrn-Wj-oXL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLx-lr-XVc">
+                                <rect key="frame" x="165" y="117" width="271" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="fMF-GP-dxf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gwX-lW-KO7" firstAttribute="centerX" secondItem="Q8u-Er-TsP" secondAttribute="centerX" id="Kev-33-ijf"/>
+                            <constraint firstItem="Q8u-Er-TsP" firstAttribute="centerX" secondItem="mAD-EA-z4K" secondAttribute="centerX" id="TSB-Mz-a9x"/>
+                            <constraint firstItem="gwX-lW-KO7" firstAttribute="top" secondItem="Q8u-Er-TsP" secondAttribute="bottom" constant="93" id="cvs-3U-vIL"/>
+                            <constraint firstItem="gwX-lW-KO7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fDK-uE-QrV"/>
+                            <constraint firstItem="Q8u-Er-TsP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="83" id="iIi-hN-dJ6"/>
+                            <constraint firstItem="GLx-lr-XVc" firstAttribute="centerX" secondItem="mAD-EA-z4K" secondAttribute="centerX" id="nF8-D3-t6l"/>
+                            <constraint firstItem="GLx-lr-XVc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="sMg-Oh-wSZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gwX-lW-KO7" secondAttribute="bottom" constant="87" id="tXn-y9-t7o"/>
+                            <constraint firstItem="Q8u-Er-TsP" firstAttribute="top" secondItem="mAD-EA-z4K" secondAttribute="bottom" constant="97" id="zQZ-sz-bfc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="Q8u-Er-TsP" id="Fki-on-DsV"/>
+                        <outlet property="cityNameTextField" destination="GLx-lr-XVc" id="xlv-1G-aEb"/>
+                        <outlet property="cityTemperature" destination="gwX-lW-KO7" id="PBM-K9-ERj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="370" y="462"/>
         </scene>
     </scenes>
 </document>
